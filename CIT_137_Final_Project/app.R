@@ -32,9 +32,6 @@ import_all_US <- function() {
         mutate(Date = start_date, Day = 0) %>% 
         select(-c(Country_Region, Last_Update))
     
-    # trying to find all the unique column names for this set of data
-    csv_columns <- (colnames(csv_tibble))
-    
     # binding all of the remaining csv files to the csv_tibble
     for (i in 1:number_days) {
         
